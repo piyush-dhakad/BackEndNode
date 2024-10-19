@@ -2,6 +2,8 @@ const express = require('express');
 const app = express();
 const port = 3200;
 
+app.use(express.json());
+app.use(express.urlencoded({extended:true}));
 app.use(function(req,res,next) {
     console.log('working');
     next();
