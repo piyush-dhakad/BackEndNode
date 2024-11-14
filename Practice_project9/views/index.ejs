@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body>
+        <div class="w-full h-full bg-zinc-700 p-10 text-white  ">
+            <nev class="flex gap-5 m-5">
+                <a href="/home">Home</a>
+                <a href="/read">Read</a>
+            </nev>
+            <h1 class="text-3xl tracking-tigher mb-3">Create User</h1>
+            <form action="/create" method="post" class="border-2">
+                <input type="text" placeholder="name" name="name" class="px-5 py-3 bg-transparent bg-neutral-500 broder-2 outline-2 rouded-lg" />
+                <input type="text" placeholder="email" name="email" class="px-5 py-3 bg-transparent broder-zinc-800 broder-2 outline-2 rouded-lg"/>
+                <input type="text" placeholder="ImageURl" name="imageUrl" class="px-5 py-3 bg-transparent broder-zinc-800 broder-2 outline-2 rouded-lg"/>
+                <input type="submit"  name="submit" class="px-5 py-2 bg-blue-500 rounded-lg ml-2"/>
+            </form>
+        </div>
+    </body>
+</html>

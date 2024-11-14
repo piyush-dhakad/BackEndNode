@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body>
+        <div class="w-full h-screen bg-zinc-700 p-10 text-white ">
+            <nev class="flex gap-5 m-5"> 
+                <a href="/home">Back to Home</a>
+                <a href="/read">Read</a>
+            </nev>
+            <h1 class="text-3xl tracking-tigher mb-3">All Users</h1>
+            <div class="flex gap-3 flex-wrap ">
+                <%
+                if(users.length) {
+                     users.forEach(function(user){
+                        %>
+    
+                        <div class="border-2 w-fit h-fit" >
+                            <div class="user max-w-27 p-4 bg-zinc-800 rouded-lg"> 
+                                <div class="bg-blue-500 w-52 h-52 rouded-lg bg-zinc-500 ">
+                                    <img class="w-full h-full" src="<%= user.imageUrl %>" alt="<%= user.imageUrl %>"/>
+                                </div>  
+                                <%= user._id %>
+                                <%= user.imageUrl %>
+                                <h3 class="text-xl mt-3  tracking-tigher"><%= user.name %></h3>
+                                <h5 class="text-zinc-500"><%= user.email %></h5>
+                            </div>
+                            <a class="text-zinc-500 p-2 m-2" href="/update/<%= user._id %>">Edit User</a>
+                            <a class="text-red-500 p-2 m-2" href="/delete/<%= user._id %>">Delete User</a>
+                        </div>           
+                        <%
+                    })
+                } else {
+                    %>
+                    <h2>No User yet</h2>
+                <%
+                } %>
+            
+                
+            </div>
+        </div>
+    </body>
+</html>
